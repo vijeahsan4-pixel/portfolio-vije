@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Portfolio Website",
+    "desc": "Website portfolio pribadi dengan HTML, CSS, dan JavaScript",
+    "tech": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "MikroTik Setup",
+    "desc": "Konfigurasi jaringan kecil menggunakan MikroTik",
+    "tech": ["Networking", "MikroTik"]
+  },
+  {
+    "title": "Landing Page",
+    "desc": "Landing page modern dengan animasi",
+    "tech": ["HTML", "CSS"]
+  }
+]

@@ -1,0 +1,332 @@
+/* ========== GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff 50%, #0b1b3a 50%);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* ========== HEADER ========== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: linear-gradient(
+    90deg,
+    rgba(11, 27, 58, 0.95),
+    rgba(37, 99, 235, 0.85)
+  );
+
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1f2937;
+  transition: 0.3s;
+
+  nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  transition: 0.3s;
+}
+
+/* hover effect */
+nav a:hover {
+  color: #ffffff;
+}
+
+/* ACTIVE MENU */
+nav a.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(90deg, #60a5fa, #ffffff);
+  border-radius: 10px;
+}
+}
+
+nav a:hover {
+  color: #0b3a82;
+}
+
+/* ========== HERO ========== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* WRAPPER FOTO */
+.photo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLOW AURA DI BELAKANG */
+.glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(37,99,235,0.6) 0%, rgba(37,99,235,0) 70%);
+  filter: blur(20px);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* FOTO */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  z-index: 1;
+  position: relative;
+  border: none;
+}
+
+/* ANIMASI GLOW */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  background: linear-gradient(180deg, #ffffff 0%, #eaf2ff 100%);
+  border-bottom: 1px solid rgba(11, 27, 58, 0.1);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #0b3a82;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #4b5563;
+}
+
+/* ========== BUTTON ========== */
+.btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  color: white;
+  background: linear-gradient(45deg, #0b3a82, #2563eb);
+  box-shadow: 0 6px 18px rgba(11, 58, 130, 0.3);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(11, 58, 130, 0.4);
+}
+
+/* ========== SECTION ========== */
+.section, .container {
+  padding: 60px 10%;
+}
+
+/* SELANG-SUKAN 50/50 LOOK */
+.section:nth-child(odd) {
+  background: #ffffff;
+}
+
+.section:nth-child(even) {
+  background: #0b1b3a;
+  color: #0b3a82;
+}
+
+.section:nth-child(even) h2,
+.section:nth-child(even) h3 {
+  color: #60a5fa;
+}
+
+/* ========== ABOUT BOX ========== */
+.about-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ========== SKILLS ========== */
+.bar {
+  height: 8px;
+  background: #d1d5db;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0b3a82, #60a5fa);
+}
+
+/* ========== CARD ========== */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(11, 58, 130, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(11, 58, 130, 0.2);
+}
+
+.card h3 {
+  color: #0b3a82;
+}
+
+/* ========== TAGS ========== */
+.tag {
+  background: #dbeafe;
+  color: #0b3a82;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* ========== FORM ========== */
+form, .contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(11, 58, 130, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0b3a82;
+  box-shadow: 0 0 10px rgba(11,58,130,0.2);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0b1b3a;
+  color: #cbd5e1;
+}
+
+/* ========== LOADING SCREEN ========== */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0b3a82;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
